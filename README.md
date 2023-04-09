@@ -1,7 +1,7 @@
 # sit323-737-2023-t1-prac4p
 
 sit323/737-2023-t1-prac4p
-Run the command
+Run the command to install node modules
 `npm install`
 
 Server starts on port 5000 at the follwing endpoint
