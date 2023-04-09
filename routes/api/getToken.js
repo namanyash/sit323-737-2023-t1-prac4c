@@ -17,7 +17,7 @@ const logger = winston.createLogger({
   ],
 });
 
-router.post(
+router.get(
   "/getToken",
   [
     //validations

@@ -31,3 +31,15 @@ returns `a/b`
 Requires header (`x-auth-token`) with a valid token
 Requires two variables `a` and `b`
 returns `a*b`
+
+To test authentication:
+make a get request to the following url
+
+`http://localhost:5000/getToken`
+Copy and save the token
+
+Make a post request to
+`http://localhost:5000/api/multiply`
+
+Supply two variables 'a' and 'b' as JSON data. You may try to imput string and other invalid input to test validations.
+This endpoint requires you to set the `x-auth-token` header. Without the header you will be denied access.
