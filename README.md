@@ -13,22 +13,22 @@ Accepts following API endpoints
 returns a valid JWT token
 
 `http://localhost:5000/api/add`
-Requires header (`x-auth-token`) with a valid token
+Requires header (`Authorization`) with a valid token
 Requires two variables `a` and `b`
 returns `a+b`
 
 `http://localhost:5000/api/subtract`
-Requires header (`x-auth-token`) with a valid token
+Requires header (`Authorization`) with a valid token
 Requires two variables `a` and `b`
 returns `a-b`
 
 `http://localhost:5000/api/divide`
-Requires header (`x-auth-token`) with a valid token
+Requires header (`Authorization`) with a valid token
 Requires two variables `a` and `b`
 returns `a/b`
 
 `http://localhost:5000/api/multiply`
-Requires header (`x-auth-token`) with a valid token
+Requires header (`Authorization`) with a valid token
 Requires two variables `a` and `b`
 returns `a*b`
 
@@ -42,4 +42,4 @@ Make a post request to
 `http://localhost:5000/api/multiply`
 
 Supply two variables 'a' and 'b' as JSON data. You may try to imput string and other invalid input to test validations.
-This endpoint requires you to set the `x-auth-token` header. Without the header you will be denied access.
+This endpoint requires you to set the `Authorization` header. Without the header you will be denied access.

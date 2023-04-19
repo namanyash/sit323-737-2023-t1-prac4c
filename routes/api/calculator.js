@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
-const auth = require("../../middleware/auth");
+const passport = require("passport");
+
+require("../../middleware/passport")(passport);
 
 const winston = require("winston");
 const logger = winston.createLogger({
@@ -23,8 +25,8 @@ router.post(
     //validations
     check("a", "Value 'A' is not a number").isNumeric(),
     check("b", "Value 'B' is not a number").isNumeric(),
-    auth,
   ],
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -49,8 +51,8 @@ router.post(
     //validations
     check("a", "Value 'A' is not a number").isNumeric(),
     check("b", "Value 'B' is not a number").isNumeric(),
-    auth,
   ],
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -75,8 +77,8 @@ router.post(
     //validations
     check("a", "Value 'A' is not a number").isNumeric(),
     check("b", "Value 'B' is not a number").isNumeric(),
-    auth,
   ],
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -101,8 +103,8 @@ router.post(
     //validations
     check("a", "Value 'A' is not a number").isNumeric(),
     check("b", "Value 'B' is not a number").isNumeric(),
-    auth,
   ],
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
